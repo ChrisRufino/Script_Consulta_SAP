@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>_imgs/analytics_117968.png</file>
+    <file>_imgs/logo.png</file>
+    <file>_imgs/menu2.png</file>
+  </qresource>
+</RCC>
