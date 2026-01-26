@@ -1,3 +1,29 @@
-\venv
-\_pycache_
-\Lib
+# Ambientes virtuais
+venv/
+env/
+ENV/
+.venv
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Qt Designer
+*.ui~
+
+# Excel temporários
+~$*.xlsx
+~$*.xls
+
+# IDE
+.vscode/
+.idea/
+
+# Outros
+*.log
+*.exe
+dist/
+build/
+*.spec
