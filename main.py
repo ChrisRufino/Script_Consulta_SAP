@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QApplication, QMainWindow,QGraphicsDropShadowEffect
 from PySide6.QtGui import QColor
 import sys
-from ui_mai import Ui_MainWindow
+from qt_designer.ui_mai import Ui_MainWindow
 from PySide6 import QtCore
 
 show_elements = {
