@@ -5,7 +5,7 @@ from ui_mai import Ui_MainWindow
 from PySide6 import QtCore
 
 show_elements = {
-    'frame','frame_8','frame_9','frame_logo'
+    'frame','frame_8','frame_9','frame_logo',"frame_buttons"
 }
 
 class MainWindow(QMainWindow, Ui_MainWindow):

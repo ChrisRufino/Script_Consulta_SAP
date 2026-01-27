@@ -272,13 +272,14 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.frame_6 = QFrame(self.frame_logo)
         self.frame_6.setObjectName(u"frame_6")
+        self.frame_6.setStyleSheet(u"background-color:none")
         self.frame_6.setFrameShape(QFrame.StyledPanel)
         self.frame_6.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_2 = QHBoxLayout(self.frame_6)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.label = QLabel(self.frame_6)
         self.label.setObjectName(u"label")
-        self.label.setStyleSheet(u"")
+        self.label.setStyleSheet(u"background-color:none")
 
         self.horizontalLayout_2.addWidget(self.label)
 

@@ -415,6 +415,9 @@ border-radius:10px
          <layout class="QVBoxLayout" name="verticalLayout_4">
           <item>
            <widget class="QFrame" name="frame_6">
+            <property name="styleSheet">
+             <string notr="true">background-color:none</string>
+            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
@@ -425,7 +428,7 @@ border-radius:10px
              <item>
               <widget class="QLabel" name="label">
                <property name="styleSheet">
-                <string notr="true"/>
+                <string notr="true">background-color:none</string>
                </property>
                <property name="text">
                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/icons/_imgs/logo.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
