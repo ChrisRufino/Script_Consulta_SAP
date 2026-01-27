@@ -252,6 +252,7 @@ class Ui_MainWindow(object):
 
         self.right_frame = QFrame(self.centralwidget)
         self.right_frame.setObjectName(u"right_frame")
+        self.right_frame.setMaximumSize(QSize(0, 16777215))
         self.right_frame.setFrameShape(QFrame.StyledPanel)
         self.right_frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_2 = QVBoxLayout(self.right_frame)
@@ -411,7 +412,7 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"DiagramadeRede", None));
         ___qtablewidgetitem16 = self.tb_razao.horizontalHeaderItem(16)
         ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"Montante", None));
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Desenvolvido por Christian Rufino", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Desenvolvido por Christian Rufino - 2026", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/icons/_imgs/logo.png\"/></p></body></html>", None))
         self.btn_login.setText(QCoreApplication.translate("MainWindow", u"Login", None))
         self.btn_razao.setText(QCoreApplication.translate("MainWindow", u"Raz\u00e3o", None))

@@ -370,7 +370,7 @@ QTableWidget{
              <string notr="true">color:rgb(120,157,186);</string>
             </property>
             <property name="text">
-             <string>copy Right  pytx 2022</string>
+             <string>Desenvolvido por Christian Rufino - 2026</string>
             </property>
            </widget>
           </item>
@@ -382,6 +382,12 @@ QTableWidget{
     </item>
     <item>
      <widget class="QFrame" name="right_frame">
+      <property name="maximumSize">
+       <size>
+        <width>0</width>
+        <height>16777215</height>
+       </size>
+      </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
