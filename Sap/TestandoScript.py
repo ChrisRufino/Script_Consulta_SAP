@@ -48,14 +48,13 @@ win32clipboard.CloseClipboard()
 # with open('report.txt','w+') as f:
 #   f.write(data)
 
-
-tratativaData = pd.read_clipboard(sep='|', skiprows= range(0,1), on_bad_lines='skip', encoding='UTF-8')
-
-tratativaData.drop(columns=['Unnamed: 0', 'Unnamed: 19'], inplace=True)
-
-
 # tratativaData.tail() pegar as ultimas 5 linhas 
 
+
+#faz a leitura do clipboard em um dataframe
+tratativaData = pd.read_clipboard(sep='|', skiprows= range(0,1), on_bad_lines='skip', encoding='UTF-8')
+
+#tira os espaços da coluna
 tratarColumns = tratativaData.columns = (
     tratativaData.columns
     .str.encode('latin1', errors='ignore')     # remove caracteres bugados
@@ -64,16 +63,22 @@ tratarColumns = tratativaData.columns = (
     .str.replace(r'\s+', ' ', regex=True)      # substitui múltiplos espaços
 )
 
+#elimina as colunas desnecessárias
+tratativaData.drop(columns=['Unnamed: 0', 'Unnamed: 19'], inplace=True)
+#Retira os espaços em branco no campo TMv
 tratativaData.drop(tratativaData.loc[tratativaData['TMv'].str.strip()=='TMv'].index, inplace=True) # remover dados duplicados na linha
-
+#Exclui os valores NaN (Not a number) nas colunas TMv e Lote
 tratativaData.dropna(subset=['TMv','Lote'], inplace=True) #eliminar NaN
 
+#A linha comentada abaixo, não realizei porque nao foi necessaria, mas o código é para remover espaços em branco que contém totalizador miais de uma linha.
 # tratativaData['DiagRede'] = tratativaData["DiagRede"].apply(lambda x: str(x).strip) # Remover os espaços em branco na coluna, que sao sõ totalizadores
 
 # tratativaData.drop(tratativaData.loc[tratativaData['DiagRede']==''].index, inplace=True)  
 
-tratativaData = tratativaData.drop(tratativaData.index[-1]) # eliminado a ultima linha = totalizador
+# eliminado a ultima linha = totalizador
+tratativaData = tratativaData.drop(tratativaData.index[-1]) 
+#transformando os valores em float para valor americano
+tratativaData['Montante MI'] = tratativaData["Montante MI"].apply(lambda x: float (x.replace('-',"").replace('.','').replace(",","."))) 
 
-tratativaData['Montante MI'] = tratativaData["Montante MI"].apply(lambda x: float (x.replace('-',"").replace('.','').replace(",",".")))
 print(tratativaData.dtypes)
 print(tratativaData.head())

@@ -3,6 +3,7 @@ from PySide6.QtGui import QColor
 import sys
 from qt_designer.ui_mai import Ui_MainWindow
 from PySide6 import QtCore
+from Sap.sap import SapGui
 
 show_elements = {
     'frame','frame_8','frame_9','frame_logo',"frame_buttons"
@@ -15,10 +16,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.txt_period_final.setInputMask('00.00.0000;_')
         self.txt_periodo_inicial.setInputMask('00.00.0000;_')
 
+        self.Sap =SapGui()
+
         #########################################
         #Botões de comando
 
         self.btn_toggle.clicked.connect(self.right_menu)
+        self.btn_fechar.clicked.connect(lambda: self.Sap.close_SAP())
 
         ########################################
 
