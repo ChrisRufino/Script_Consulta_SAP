@@ -13,6 +13,12 @@ session.findById("wnd[0]").maximize()
 
 session.findById("wnd[0]/tbar[0]/okcd").text = "mb51"
 session.findById("wnd[0]").sendVKey(0)
+session.findById("wnd[0]/usr/ctxtMATNR-LOW").text = ""
+session.findById("wnd[0]/usr/ctxtWERKS-LOW").text = ""
+session.findById("wnd[0]/usr/ctxtLGORT-LOW").text = ""
+session.findById("wnd[0]/usr/ctxtBUDAT-LOW").text = ""
+session.findById("wnd[0]/usr/ctxtBUDAT-HIGH").text = ""
+
 session.findById("wnd[0]/usr/radRFLAT_L").setFocus()
 session.findById("wnd[0]/usr/radRFLAT_L").select() 
 session.findById("wnd[0]/usr/ctxtALV_DEF").text = "/dd3l"
@@ -71,7 +77,7 @@ tratativaData.drop(tratativaData.loc[tratativaData['TMv'].str.strip()=='TMv'].in
 tratativaData.dropna(subset=['TMv','Lote'], inplace=True) #eliminar NaN
 
 #A linha comentada abaixo, não realizei porque nao foi necessaria, mas o código é para remover espaços em branco que contém totalizador miais de uma linha.
-# tratativaData['DiagRede'] = tratativaData["DiagRede"].apply(lambda x: str(x).strip) # Remover os espaços em branco na coluna, que sao sõ totalizadores
+tratativaData['DiagRede'] = tratativaData["DiagRede"].apply(lambda x: str(x).strip) # Remover os espaços em branco na coluna, que sao sõ totalizadores
 
 # tratativaData.drop(tratativaData.loc[tratativaData['DiagRede']==''].index, inplace=True)  
 

@@ -175,8 +175,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_7.addWidget(self.frame_7)
 
         self.tb_razao = QTableWidget(self.main_frame)
-        if (self.tb_razao.columnCount() < 17):
-            self.tb_razao.setColumnCount(17)
+        if (self.tb_razao.columnCount() < 18):
+            self.tb_razao.setColumnCount(18)
         __qtablewidgetitem = QTableWidgetItem()
         self.tb_razao.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
@@ -211,6 +211,8 @@ class Ui_MainWindow(object):
         self.tb_razao.setHorizontalHeaderItem(15, __qtablewidgetitem15)
         __qtablewidgetitem16 = QTableWidgetItem()
         self.tb_razao.setHorizontalHeaderItem(16, __qtablewidgetitem16)
+        __qtablewidgetitem17 = QTableWidgetItem()
+        self.tb_razao.setHorizontalHeaderItem(17, __qtablewidgetitem17)
         if (self.tb_razao.rowCount() < 10):
             self.tb_razao.setRowCount(10)
         self.tb_razao.setObjectName(u"tb_razao")
@@ -386,33 +388,35 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem2 = self.tb_razao.horizontalHeaderItem(2)
         ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Centro", None));
         ___qtablewidgetitem3 = self.tb_razao.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Material", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Depósito", None));
         ___qtablewidgetitem4 = self.tb_razao.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"DescricaoMaterial", None));
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Material", None));
         ___qtablewidgetitem5 = self.tb_razao.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"TipoAvalia\u00e7\u00e3o", None));
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"Descric\u00e7\u00e3o", None));
         ___qtablewidgetitem6 = self.tb_razao.horizontalHeaderItem(6)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Lote", None));
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"TipoAv.", None));
         ___qtablewidgetitem7 = self.tb_razao.horizontalHeaderItem(7)
-        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"ElementoPEP", None));
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"Lote", None));
         ___qtablewidgetitem8 = self.tb_razao.horizontalHeaderItem(8)
-        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"Doc.Material", None));
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"ElementoPep", None));
         ___qtablewidgetitem9 = self.tb_razao.horizontalHeaderItem(9)
-        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"DataL\u00e7to.", None));
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"Doc.Material", None));
         ___qtablewidgetitem10 = self.tb_razao.horizontalHeaderItem(10)
-        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"Quantidade", None));
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"DataLancamento", None));
         ___qtablewidgetitem11 = self.tb_razao.horizontalHeaderItem(11)
-        ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"Pedido", None));
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"Quantidade", None));
         ___qtablewidgetitem12 = self.tb_razao.horizontalHeaderItem(12)
-        ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"Refer\u00eancia", None));
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"Pedido", None));
         ___qtablewidgetitem13 = self.tb_razao.horizontalHeaderItem(13)
-        ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"TextoCabechalo", None));
+        ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"Referencia", None));
         ___qtablewidgetitem14 = self.tb_razao.horizontalHeaderItem(14)
-        ___qtablewidgetitem14.setText(QCoreApplication.translate("MainWindow", u"DiagramadeRede", None));
+        ___qtablewidgetitem14.setText(QCoreApplication.translate("MainWindow", u"TextoCabecalho", None));
         ___qtablewidgetitem15 = self.tb_razao.horizontalHeaderItem(15)
-        ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"DiagramadeRede", None));
+        ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"Reserva", None));
         ___qtablewidgetitem16 = self.tb_razao.horizontalHeaderItem(16)
-        ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"Montante", None));
+        ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"DiagramaRede", None));
+        ___qtablewidgetitem17 = self.tb_razao.horizontalHeaderItem(17)
+        ___qtablewidgetitem17.setText(QCoreApplication.translate("MainWindow", u"Montante", None));
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Desenvolvido por Christian Rufino - 2026", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/icons/_imgs/logo.png\"/></p></body></html>", None))
         self.btn_login.setText(QCoreApplication.translate("MainWindow", u"Login", None))

@@ -65,8 +65,14 @@ class SapGui():
 
   def leadger(self, date_initial, date_finaly):
       self.connect_sap()
-      self.session.findById("wnd[0]/tbar[0]/okcd").text = "mb51"
+      self.session.findById("wnd[0]/tbar[0]/okcd").text = "/nmb51"
       self.session.findById("wnd[0]").sendVKey(0)
+      self.session.findById("wnd[0]/usr/ctxtMATNR-LOW").text = ""
+      self.session.findById("wnd[0]/usr/ctxtWERKS-LOW").text = ""
+      self.session.findById("wnd[0]/usr/ctxtLGORT-LOW").text = ""
+      self.session.findById("wnd[0]/usr/ctxtBUDAT-LOW").text = ""
+      self.session.findById("wnd[0]/usr/ctxtBUDAT-HIGH").text = ""
+
       self.session.findById("wnd[0]/usr/radRFLAT_L").setFocus()
       self.session.findById("wnd[0]/usr/radRFLAT_L").select() 
       self.session.findById("wnd[0]/usr/ctxtALV_DEF").text = "/dd3l"
@@ -116,6 +122,8 @@ class SapGui():
       tratativaData = tratativaData.drop(tratativaData.index[-1]) 
       #transformando os valores em float para valor americano
       tratativaData['Montante MI'] = tratativaData["Montante MI"].apply(lambda x: float (x.replace('-',"").replace('.','').replace(",","."))) 
+
+      tratativaData['DiagRede'] = tratativaData["DiagRede"].apply(lambda x: str(x).strip())
       return tratativaData
   
   def close_SAP(self):
