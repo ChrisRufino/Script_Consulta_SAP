@@ -60,6 +60,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             msg.exec_()
             
             return
+        
+        data = self.Sap.leadger(self.txt_periodo_inicial.text(),self.txt_period_final.text()) #pega as datas adicionadas no executavel
+        data = data.values.tolist() # transforma os dados em lista
+
+        self.tb_razao.setRowCount(len(data)) # conta as linhas na tabela
+
+        for row, text in enumerate(data):
+            for column, data in enumerate(text):
+                self.tb_razao.setItem(row,column,QTableWidgetItem(str(data)))
 
 
 
