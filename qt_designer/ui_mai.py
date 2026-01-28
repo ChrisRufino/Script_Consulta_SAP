@@ -416,7 +416,7 @@ class Ui_MainWindow(object):
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Desenvolvido por Christian Rufino - 2026", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/icons/_imgs/logo.png\"/></p></body></html>", None))
         self.btn_login.setText(QCoreApplication.translate("MainWindow", u"Login", None))
-        self.btn_razao.setText(QCoreApplication.translate("MainWindow", u"Raz\u00e3o", None))
+        self.btn_razao.setText(QCoreApplication.translate("MainWindow", u"Rodar_MB51", None))
         self.btn_excel.setText(QCoreApplication.translate("MainWindow", u"Excel", None))
         self.btn_email.setText(QCoreApplication.translate("MainWindow", u"Email", None))
         self.btn_fechar.setText(QCoreApplication.translate("MainWindow", u"Fechar SAP", None))
