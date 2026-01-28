@@ -49,6 +49,31 @@ win32clipboard.CloseClipboard()
 #   f.write(data)
 
 
-tratativaData = pd.read_clipboard(sep='|', skiprows= range(0,0), on_bad_lines='skip', encoding='UTF-8')
+tratativaData = pd.read_clipboard(sep='|', skiprows= range(0,1), on_bad_lines='skip', encoding='UTF-8')
 
+tratativaData.drop(columns=['Unnamed: 0', 'Unnamed: 19'], inplace=True)
+
+
+# tratativaData.tail() pegar as ultimas 5 linhas 
+
+tratarColumns = tratativaData.columns = (
+    tratativaData.columns
+    .str.encode('latin1', errors='ignore')     # remove caracteres bugados
+    .str.decode('latin1')                      # volta para string limpa
+    .str.strip()                               # remove espaços nas bordas
+    .str.replace(r'\s+', ' ', regex=True)      # substitui múltiplos espaços
+)
+
+tratativaData.drop(tratativaData.loc[tratativaData['TMv'].str.strip()=='TMv'].index, inplace=True) # remover dados duplicados na linha
+
+tratativaData.dropna(subset=['TMv','Lote'], inplace=True) #eliminar NaN
+
+# tratativaData['DiagRede'] = tratativaData["DiagRede"].apply(lambda x: str(x).strip) # Remover os espaços em branco na coluna, que sao sõ totalizadores
+
+# tratativaData.drop(tratativaData.loc[tratativaData['DiagRede']==''].index, inplace=True)  
+
+tratativaData = tratativaData.drop(tratativaData.index[-1]) # eliminado a ultima linha = totalizador
+
+tratativaData['Montante MI'] = tratativaData["Montante MI"].apply(lambda x: float (x.replace('-',"").replace('.','').replace(",",".")))
+print(tratativaData.dtypes)
 print(tratativaData.head())
