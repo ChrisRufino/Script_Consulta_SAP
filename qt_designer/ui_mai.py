@@ -392,7 +392,7 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem4 = self.tb_razao.horizontalHeaderItem(4)
         ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Material", None));
         ___qtablewidgetitem5 = self.tb_razao.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"Descric\u00e7\u00e3o", None));
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"Descri\u00e7\u00e3o", None));
         ___qtablewidgetitem6 = self.tb_razao.horizontalHeaderItem(6)
         ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"TipoAv.", None));
         ___qtablewidgetitem7 = self.tb_razao.horizontalHeaderItem(7)

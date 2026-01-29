@@ -121,7 +121,8 @@ class SapGui():
       # eliminado a ultima linha = totalizador
       tratativaData = tratativaData.drop(tratativaData.index[-1]) 
       #transformando os valores em float para valor americano
-      tratativaData['Montante MI'] = tratativaData["Montante MI"].apply(lambda x: float (x.replace('-',"").replace('.','').replace(",","."))) 
+
+      tratativaData['Montante em MI'] = tratativaData["Montante em MI"].apply(lambda x: float (x.replace('-',"").replace('.','').replace(",","."))) 
 
       tratativaData['DiagRede'] = tratativaData["DiagRede"].apply(lambda x: str(x).strip())
       return tratativaData

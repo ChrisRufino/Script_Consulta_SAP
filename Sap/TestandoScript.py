@@ -26,7 +26,7 @@ session.findById("wnd[0]/usr/ctxtALV_DEF").setFocus()
 session.findById("wnd[0]/usr/ctxtALV_DEF").caretPosition = 5
 session.findById("wnd[0]").sendVKey (0)
 session.findById("wnd[0]/usr/ctxtBUDAT-LOW").text = '01.01.2026'
-session.findById("wnd[0]/usr/ctxtBUDAT-HIGH").text = '10.01.2026'
+session.findById("wnd[0]/usr/ctxtBUDAT-HIGH").text = '29.01.2026'
 session.findById("wnd[0]/usr/ctxtBUDAT-HIGH").setFocus() 
 session.findById("wnd[0]/usr/ctxtBUDAT-HIGH").caretPosition = 10
 session.findById("wnd[0]").sendVKey(0)
@@ -84,7 +84,8 @@ tratativaData['DiagRede'] = tratativaData["DiagRede"].apply(lambda x: str(x).str
 # eliminado a ultima linha = totalizador
 tratativaData = tratativaData.drop(tratativaData.index[-1]) 
 #transformando os valores em float para valor americano
-tratativaData['Montante MI'] = tratativaData["Montante MI"].apply(lambda x: float (x.replace('-',"").replace('.','').replace(",","."))) 
+print("Colunas disponíveis:", tratativaData.columns.tolist())
+tratativaData['Montante em MI'] = tratativaData["Montante em MI"].apply(lambda x: float (x.replace('-',"").replace('.','').replace(",","."))) 
 
 print(tratativaData.dtypes)
 print(tratativaData.head())
