@@ -170,13 +170,10 @@ pip install -r requirements.txt
 4. Push para a branch (`git push origin feature/AmazingFeature`)
 5. Abra um Pull Request
 
-## 📄 Licença
-
-Este projeto está sob a licença [MIT/GPL/Outro] - veja o arquivo LICENSE para detalhes.
 
 ## 👥 Autores
 
-- Seu Nome - *Trabalho Inicial*
+-Christian Lima Rufino da Silva - *Trabalho Inicial*
 
 ## 🙏 Agradecimentos
 
