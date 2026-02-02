@@ -25,8 +25,8 @@ session.findById("wnd[0]/usr/ctxtALV_DEF").text = "/dd3l"
 session.findById("wnd[0]/usr/ctxtALV_DEF").setFocus() 
 session.findById("wnd[0]/usr/ctxtALV_DEF").caretPosition = 5
 session.findById("wnd[0]").sendVKey (0)
-session.findById("wnd[0]/usr/ctxtBUDAT-LOW").text = '01.01.2026'
-session.findById("wnd[0]/usr/ctxtBUDAT-HIGH").text = '29.01.2026'
+session.findById("wnd[0]/usr/ctxtBUDAT-LOW").text = '01.02.2026'
+session.findById("wnd[0]/usr/ctxtBUDAT-HIGH").text = '02.02.2026'
 session.findById("wnd[0]/usr/ctxtBUDAT-HIGH").setFocus() 
 session.findById("wnd[0]/usr/ctxtBUDAT-HIGH").caretPosition = 10
 session.findById("wnd[0]").sendVKey(0)
