@@ -9,10 +9,6 @@ from datetime import datetime
 from functions import Email_report
 
 
-
-
-
-
 show_elements = {
     'frame','frame_8','frame_9','frame_logo',"frame_buttons"
 }
