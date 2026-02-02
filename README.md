@@ -187,4 +187,12 @@ pip install -r requirements.txt
 
 ---
 
+## 📱 Telas da Aplicação
+
+### Tela Principal
+<img src="img_readme/Tela_Projeto_1.png" alt="Tela Principal" width="700">
+
+### Tela de Operação
+<img src="img_readme/Tela_Projeto_2.png" alt="Tela de Automação SAP" width="700">
+
 **Desenvolvido com ❤️ para automação SAP**
