@@ -4,7 +4,9 @@ Sistema de automação desenvolvido em Python para integração com SAP, com int
 
 ## 📋 Descrição
 
-Este projeto oferece uma solução completa de automação para SAP, permitindo aos usuários executar tarefas repetitivas de forma automatizada através de uma interface gráfica intuitiva desenvolvida com PySide6, Em específico, retirada de relatório da "MB51" no SAP pelo período solicitado.
+Este projeto oferece uma solução completa de automação para SAP, permitindo aos usuários executar tarefas repetitivas de forma automatizada através de uma interface gráfica intuitiva desenvolvida com PySide6. 
+
+**Funcionalidade Principal:** Extração automatizada de relatórios da transação **MB51** no SAP, processando dados por período customizável e gerando arquivo Excel que pode ser salvo localmente ou enviado diretamente por e-mail.
 
 ## ✨ Funcionalidades
 
