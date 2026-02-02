@@ -132,15 +132,19 @@ O executável será gerado na pasta `dist/`.
 ## 📁 Estrutura do Projeto
 
 ```
-projeto/
-├── venv/                  # Ambiente virtual
-├── sap3.ui               # Arquivo de interface Qt Designer
-├── ui_main.py            # Interface convertida para Python
-├── icons.qrc             # Arquivo de recursos Qt
-├── icons_rc.py           # Recursos convertidos para Python
-├── main.py               # Arquivo principal
-├── requirements.txt      # Dependências
-└── README.md            # Este arquivo
+Script_Consulta_SAP/
+├── Icons/                     # Ícones e recursos visuais
+├── Sap/                       # Módulos e scripts SAP
+├── __pycache__/               # Cache Python (gerado automaticamente)
+├── _imgs/                     # Imagens do projeto
+├── img_readme/                # Imagens para documentação
+├── qt_designer/               # Arquivos do Qt Designer (.ui)
+├── .gitignore                 # Arquivos ignorados pelo Git
+├── README.md                  # Documentação do projeto
+├── functions.py               # Funções auxiliares
+├── main.py                    # Arquivo principal da aplicação
+├── report.txt                 # Relatórios gerados
+└── report_icon_215362.ico     # Ícone do executável
 ```
 
 ## 📝 Notas Importantes
