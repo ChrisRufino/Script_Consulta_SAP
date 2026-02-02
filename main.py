@@ -77,29 +77,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             for column, data in enumerate(text):
                 self.tb_razao.setItem(row,column,QTableWidgetItem(str(data)))
 
-
-    # def report_excel(self):
-    #     data = []
-    #     update_data=[]
-
-    #     for row in range(self.tb_razao.rowCount()):
-    #         for column in range(self.tb_razao.columnCount()):
-    #             data.append(self.tb_razao.item(row,column).text())
-
-    #         update_data.append(data)
-    #         data = []
-
-    #     self.df = pd.DataFrame(update_data, columns=['Usuário','TipoMovimento','Centro','Depósito','Material','Descrição','TipAv.','Lote','ElmentoPep','Doc.Material','DataLancamento','Quantidad','Pedido','Referencia','TextoCabecalho','Reserva','DiagramaRede','Montante'])
-    #     self.df['Montante'] = self.df['Montante'].astype(float)
-    
-
-    #     self.total = self.df.groupby("Descrição")['Montante'].sum().reset_index()
-    #  # agrupar os valores, somar e depois resetar Index para o índice seja reorganizado
-    #     writer = pd.ExcelWriter("Report.xlsx")
-    #     self.total.to_excel(writer,sheet_name="Total Atribuição", index=None)
-    #     self.df.to_excel(writer,sheet_name='Leadger',index=None)
-    #     writer.save()
-
     def report_excel(self):
         try:
             # Verificar se há dados
@@ -163,6 +140,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             msg.exec_()
             print(f"Erro detalhado: {e}")
 
+    def send_email(self):
+        pass
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
