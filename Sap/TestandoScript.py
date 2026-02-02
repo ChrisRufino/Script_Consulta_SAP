@@ -85,7 +85,7 @@ tratativaData['DiagRede'] = tratativaData["DiagRede"].apply(lambda x: str(x).str
 tratativaData = tratativaData.drop(tratativaData.index[-1]) 
 #transformando os valores em float para valor americano
 print("Colunas disponíveis:", tratativaData.columns.tolist())
-tratativaData['Montante em MI'] = tratativaData["Montante em MI"].apply(lambda x: float (x.replace('-',"").replace('.','').replace(",","."))) 
+tratativaData['Montante MI'] = tratativaData["Montante MI"].apply(lambda x: float (x.replace('-',"").replace('.','').replace(",","."))) 
 
 print(tratativaData.dtypes)
 print(tratativaData.head())

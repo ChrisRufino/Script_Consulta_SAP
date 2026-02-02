@@ -15,7 +15,7 @@ class Email_report():
     self.email.HTMLbody = body
 
   def email_attachment(self, anexo):
-    self.email_attachment.Add(anexo)
+     self.email.Attachments.Add(anexo) 
 
   def email_send(self):
-    self.email.send()
+    self.email.Send()

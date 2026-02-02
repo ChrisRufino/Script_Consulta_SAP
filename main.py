@@ -1,11 +1,13 @@
 from PySide6.QtWidgets import QApplication, QMainWindow,QGraphicsDropShadowEffect,QMessageBox,QTableWidgetItem
-from PySide6.QtGui import QColor
+from PySide6.QtGui import QColor, QIcon
 import sys
 from qt_designer.ui_mai import Ui_MainWindow
 from PySide6 import QtCore
 from Sap.sap import SapGui
 import pandas as pd
 from datetime import datetime
+from functions import Email_report
+
 
 
 
@@ -19,6 +21,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         self.setupUi(self)
+        appIcon = QIcon(':/icons/_imgs/analytics_117968.png')
+        self.setWindowIcon(appIcon)
         self.txt_period_final.setInputMask('00.00.0000;_')
         self.txt_periodo_inicial.setInputMask('00.00.0000;_')
 
@@ -31,6 +35,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btn_fechar.clicked.connect(lambda: self.Sap.close_SAP())
         self.btn_razao.clicked.connect(self.leadger_report)
         self.btn_excel.clicked.connect(self.report_excel)
+        self.btn_login.clicked.connect(lambda: self.Sap.sapLogin())
+        self.btn_email.clicked.connect(self.send_email)
 
         ########################################
 
@@ -130,18 +136,37 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             msg.setIcon(QMessageBox.Information)
             msg.setWindowTitle("Sucesso")
             msg.setText(f"Relatório exportado com sucesso!\nArquivo: {filename}")
-            msg.exec_()
+            msg.exec()
         
         except Exception as e:
             msg = QMessageBox()
             msg.setIcon(QMessageBox.Critical)
             msg.setWindowTitle("Erro")
             msg.setText(f"Erro ao gerar relatório:\n{str(e)}")
-            msg.exec_()
+            msg.exec()
             print(f"Erro detalhado: {e}")
 
     def send_email(self):
-        pass
+        self.report_excel()
+        body = f"""
+            <h2>Relatório diário SAP</h2> <br>
+            <p>Segue relatório da MB51 dos centros: ["2096","2914","2929","2944","2933","2032","20AI","29AF"]</p>
+            <p>Valores do montante por material:</p>
+            {self.total.to_html()}
+            """
+        
+        e = Email_report()
+        e.recipient("christisael@gmail.com",'relatório da MB51')
+        e.email_body(body)
+        filename = f"MB51_{datetime.now().strftime('%d-%m-%Y')}.xlsx"
+        e.email_attachment(f'C:/Users/BZZL/Downloads/meusproejtos/Script_Consulta_SAP/{filename}')
+        e.email_send()
+
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        msg.setWindowTitle("Email")
+        msg.setText("Email enviado")
+        msg.exec()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
